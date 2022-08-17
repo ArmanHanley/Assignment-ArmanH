@@ -79,7 +79,7 @@ The steps below will show you how to implement the feature flag and the targetin
 
 14. If you are interested in testing the targeting settings you created, exit the python program in terminal by pressing CTRL+C to quit.
 
-15. Edit assignment.py again but this time edit line 12 and change country to "Spain" instead of "Ireland" and save.
+15. Edit assignment.py again but this time edit line 11 and change country to "Spain" instead of "Ireland" and save.
 
 16. Jump back into the terminal again. You should still be within your virtual environment, if not refer to step 5 to activate it again. Run the python program again by typing : `python assignment.py` and hit enter.
 
@@ -117,7 +117,7 @@ The steps below will show you how to implement the feature flag and the targetin
 
 13. If you are interested in testing the targeting settings you created, exit the python program in terminal by pressing CTRL+C to quit.
 
-14. Edit assignment.py again but this time edit line 12 and change country to "Spain" instead of "Ireland" and save.
+14. Edit assignment.py again but this time edit line 11 and change country to "Spain" instead of "Ireland" and save.
 
 15. Jump back into the terminal again. You should still be within your virtual environment, if not refer to step 7 to activate it again. Run the python program again by typing : `python assignment.py` and hit enter.
 
