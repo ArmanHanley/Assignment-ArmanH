@@ -81,7 +81,7 @@ The steps below will show you how to implement the feature flag and the targetin
 
 15. Edit assignment.py again but this time edit line 12 and change country to "Spain" instead of "Ireland" and save.
 
-16. Jump back into the terminal again. You should still be within your virtual environment, if not refer to step 7 to activate it again. Run the python program again by typing : `python assignment.py` and hit enter.
+16. Jump back into the terminal again. You should still be within your virtual environment, if not refer to step 5 to activate it again. Run the python program again by typing : `python assignment.py` and hit enter.
 
 17. Refresh the url page `http://127.0.0.1:5000` and you should see the Spanish flag displayed instead. This is because we are using targetting rules to first identify the user's country and based off this information, we are displaying the relavant image to them. If you are still seeing the null image, your feature flag may be turned off so turn this back on in LaunchDarkly.
 
