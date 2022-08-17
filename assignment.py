@@ -8,7 +8,7 @@ user = {                                            # Creating a user profile. I
   "key": "abcdef",
   "firstName": "Arman",
   "lastName": "Hanley",
-  "country": "Spain",
+  "country": "Ireland",
   "user_segment": "beta_tester"
 }
 
