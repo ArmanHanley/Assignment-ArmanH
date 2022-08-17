@@ -1,18 +1,24 @@
 # Project Implementation Instructions
 
 
-This document explains how to implement a feature flag from LaunchDarkly using the Python SDK.
+This document explains how to implement a feature flag from LaunchDarkly using the Python SDK. 
+
+This feature flag turns an image on and off on a HTML page. Feature flag targeting has also been implemented in this solution to determine which image exactly to display to the user depending on the country they are from (country variable is hard-coded in the python script). 
+
+The steps below will show you how to implement the feature flag and the targeting functions within it and also how to run the Python script locally on your computer. Mac and Windows instructions written below.
 
 
-## Prerequisites - Building the Feature Flag
+## Prerequisites - Building the Feature Flag in LaunchDarkly 
 
 1. Start a free trial with LaunchDarkly at https://launchdarkly.com/start-trial/
 
 2. Create a feature flag called "launch_region_flag"
 
-3. Set the flag variation to type 'String'
+3. Select 'SDKs using Client-side ID'
 
-4. Create 5 Variations for this feature flag:
+4. Set the flag variation to type 'String'
+
+5. Create 5 Variations for this feature flag:
 
 		Variation 1 : ireland.png
 		Variation 2 : france.png
@@ -20,23 +26,23 @@ This document explains how to implement a feature flag from LaunchDarkly using t
 		Variation 4 : portugal.png
 		Variation 5 : null.png
 
-5. Set the Default ON to Variation 1
+6. Set the Default ON to Variation 1
 
-6. Set the Default OFF to Variation 5
+7. Set the Default OFF to Variation 5
 
-7. Save the flag
+8. Save the flag
 
-8. Click on the feature flag you just created and go to the targetting menu. We are going to create 4 targetting rules.
+9. Click on the feature flag you just created and go to the targetting menu. We are going to create 4 targetting rules.
 
-9. Under the 'Target users who match these rules' section, click 'Add Rule'
+10. Under the 'Target users who match these rules' section, click 'Add Rule'
 
-10. Create a rule where 'IF country contains value Ireland', Serve ireland.png
+11. Create a rule where 'IF country contains value Ireland', Serve ireland.png.
 
-11. Repeat step 10 three more times for Spain, France and Portugal.
+12. Repeat step 11 three more times for Spain, France and Portugal for thier associating image variations referenced above.
 
-12. You should now have 4 rules in total whereby if the country is X then the rule will serve x.png
+13. You should now have 4 rules in total whereby if the country is X then the rule will serve x.png
 
-13. At the bottom of the targeting page, set the Default Rule to serve null.png and if targeting is off, serve null.png as well.
+14. At the bottom of the targeting page, set the Default Rule to serve null.png and if targeting is off, serve null.png as well.
 
 
 
@@ -57,9 +63,9 @@ This document explains how to implement a feature flag from LaunchDarkly using t
 
 6. Next we need to install Flask in the virtual environment. To do this type : `pip install Flask` and hit enter. Flask should be installed successfully in the virtual environment.
 
-7. If step 7 didn't work, you may need to install Pip. To install Pip type `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` and click enter. After that executes type `python3 get-pip.py` to run the program. Pip should be installed successfully now. Repeat step 7.
+7. If step 6 didn't work, you may need to install Pip. To install Pip type `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` and click enter. After that executes type `python3 get-pip.py` to run the program. Pip should be installed successfully now. Repeat step 6.
 
-8. Next we need to install the LaunchDarkly SDK. Again within the virtual Environment type : `pip install -r requirements.txt` and hit enter. You have now installed the LaunchDarkly Server SDK.
+8. Next we need to install the LaunchDarkly SDK. Again within the virtual environment type : `pip install -r requirements.txt` and hit enter. You have now installed the LaunchDarkly Server SDK.
 
 9. If you type : `pip list` and hit enter, you will see Flask and the SDK installed in the virtual environment now.
 
@@ -71,7 +77,7 @@ This document explains how to implement a feature flag from LaunchDarkly using t
 
 13. Turn the feature flag off, refresh the page and you will see a 'null' image displayed.
 
-14. If you are interested in testing the targeting settings, exit the python program in terminal by pressing CTRL+C to quit.
+14. If you are interested in testing the targeting settings you created, exit the python program in terminal by pressing CTRL+C to quit.
 
 15. Edit assignment.py again but this time edit line 12 and change country to "Spain" instead of "Ireland" and save.
 
@@ -109,7 +115,7 @@ This document explains how to implement a feature flag from LaunchDarkly using t
 
 12. Turn the feature flag off, refresh the page and you will see a 'null' image displayed.
 
-13. If you are interested in testing the targeting settings, exit the python program in terminal by pressing CTRL+C to quit.
+13. If you are interested in testing the targeting settings you created, exit the python program in terminal by pressing CTRL+C to quit.
 
 14. Edit assignment.py again but this time edit line 12 and change country to "Spain" instead of "Ireland" and save.
 
